@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -66,7 +69,9 @@ public class UtensiliosActivity extends AppCompatActivity {
         gitHub= Client.getClient().create(CookWithMeAPI.class);
         //define progressbar
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
-
+        //flecha
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         doApiCall(null); //hace las llamadas
         doApiCallUtensiliosComprados();
 
@@ -142,11 +147,17 @@ public class UtensiliosActivity extends AppCompatActivity {
         progressBar.setVisibility(View.GONE);
     }
 
-    public void volverBtn(View v){
-        Intent main= new Intent (UtensiliosActivity.this, TiendaActivity.class);
-        startActivity(main);
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                Intent main= new Intent (UtensiliosActivity.this, TiendaActivity.class);
+                startActivity(main);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-
 
 
 }

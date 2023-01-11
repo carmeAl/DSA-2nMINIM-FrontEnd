@@ -36,6 +36,7 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
     public IngredientesComprados ic;
     public int idJugador;
     CookWithMeAPI gitHub;
+    ProgressBar progressBar6;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -56,6 +57,8 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
             TextViewNivelIngrediente = (TextView) v.findViewById(R.id.nivelObjeto1);
             urlImagen = (ImageView) v.findViewById(R.id.icon);
             comprarBtn = (Button) v.findViewById(R.id.comprarBtn);
+            progressBar6 = (ProgressBar)v.findViewById(R.id.progressBar7);
+            progressBar6.setVisibility(View.INVISIBLE);
             gitHub= Client.getClient().create(CookWithMeAPI.class);
 
         }
@@ -115,8 +118,9 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
+        progressBar6.setVisibility(View.VISIBLE);
 
-         c = listaIngredientes.get(position); //me guardo la posición
+        c = listaIngredientes.get(position); //me guardo la posición
         //recorrido para ver si está comprado
         for(Ingrediente i : ingredientesComprados){
 
@@ -134,6 +138,7 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
         holder.TextViewNivelIngrediente.setText("Nivel: "+ toString().valueOf(nivel));
 
         Glide.with(holder.urlImagen.getContext()).load(CookWithMeAPI.URL+c.urlImagen).into(holder.urlImagen); //imagen que quiero cargar
+        progressBar6.setVisibility(View.INVISIBLE);
 
         //COMPRAR
         holder.comprarBtn.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +146,7 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
                 int pos = holder.getAdapterPosition();
                 c=listaIngredientes.get(pos);
                 int idIngrediente = c.getId();
-
+                progressBar6.setVisibility(View.VISIBLE);
                 gitHub.postIngredienteComprado(new edu.upc.dsa.proyecto.models.IngredientesComprados(idIngrediente,idJugador)).enqueue(new Callback<Void>() {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
@@ -153,8 +158,11 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
                             holder.comprarBtn.setVisibility(View.GONE);
                             Toast.makeText(v.getContext(),"Comprado correctamente", Toast.LENGTH_SHORT).show();
                         }
-                        else if (response.code()==404){
-                            Toast.makeText(v.getContext(),"No tienes suficiente dinero/nivel", Toast.LENGTH_SHORT).show();
+                        else if (response.code()==501) {
+                            Toast.makeText(v.getContext(),"No tienes suficiente dinero", Toast.LENGTH_SHORT).show();
+                        }
+                        else if (response.code()==502) {
+                            Toast.makeText(v.getContext(),"No tienes suficiente nivel", Toast.LENGTH_SHORT).show();
                         }
                     }
                     @Override
@@ -163,6 +171,8 @@ public class MyAdapterIngredientes extends RecyclerView.Adapter<MyAdapterIngredi
                         Log.d("RECIPE",msg);
                     }
                 });
+                progressBar6.setVisibility(View.INVISIBLE);
+
             }
         });
 

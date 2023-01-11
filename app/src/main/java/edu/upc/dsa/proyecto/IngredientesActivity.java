@@ -1,5 +1,7 @@
 package edu.upc.dsa.proyecto;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +14,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -63,6 +66,9 @@ public class IngredientesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         progressBar2 = (ProgressBar)findViewById(R.id.progressBar2);
         idJugador = Integer.parseInt(sharedPref.getString(KEY_ID,null));
+        //flecha
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         // define an adapter
         adapter = new MyAdapterIngredientes();
@@ -144,9 +150,16 @@ public class IngredientesActivity extends AppCompatActivity {
         progressBar2.setVisibility(View.GONE);
     }
 
-    public void volverBtn(View v){
-        Intent main= new Intent (IngredientesActivity.this, TiendaActivity.class);
-        startActivity(main);
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                Intent main= new Intent (IngredientesActivity.this, TiendaActivity.class);
+                startActivity(main);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

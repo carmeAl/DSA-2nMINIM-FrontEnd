@@ -1,10 +1,13 @@
 package edu.upc.dsa.proyecto;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,17 +42,15 @@ public class RegisterActivity extends AppCompatActivity {
         editTextEmail = (EditText)findViewById(R.id.editTextEmail);
         editTextPais = (EditText)findViewById(R.id.editTextPais);
         guardarBtn = (Button)findViewById(R.id.guardarBtn);
-        volverBtn = (Button)findViewById(R.id.volverBtn);
         gitHub= Client.getClient().create(CookWithMeAPI.class);
         progressBar4 = (ProgressBar)findViewById(R.id.progressBar4);
         progressBar4.setVisibility(View.INVISIBLE);
+        //flecha
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
     }
-    public void volverBtn(View v){
-        //Volver a logIn Activity
-        Intent volver= new Intent (RegisterActivity.this, LogInActivity.class);
-        startActivity(volver);
-    }
+
     public void guardarBtn(View v) {
 
         String nombre = editTextNombreReg.getText().toString();
@@ -87,5 +88,16 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar4.setVisibility(View.GONE);
         Log.d("RECIPE", "end login");
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                Intent main= new Intent (RegisterActivity.this, LogInActivity.class);
+                startActivity(main);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

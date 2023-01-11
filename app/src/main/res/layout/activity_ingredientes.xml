@@ -8,25 +8,14 @@
     android:backgroundTint="#FEBC59"
     tools:context=".IngredientesActivity">
 
-    <Button
-        android:id="@+id/volverBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#F4511E"
-        android:onClick="volverBtn"
-        android:text="VOLVER"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/my_swipe_refresh"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-77dp"
-        tools:layout_editor_absoluteY="0dp" />
+        android:layout_width="412dp"
+        android:layout_height="656dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/my_recycler_view"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
@@ -44,6 +33,18 @@
         android:layout_height="622dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="¡Compra ingredientes para tus nuevas recetas!"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

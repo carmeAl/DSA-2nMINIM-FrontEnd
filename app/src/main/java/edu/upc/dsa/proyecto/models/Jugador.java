@@ -9,17 +9,27 @@ public class Jugador {
     private String email;
     private String pais;
     private double dinero;
+    private int nivel;
 
     public Jugador() {
     }
 
-    public Jugador (String nombre, String password, String email, String pais, double dinero) {
+    public Jugador (String nombre, String password, String email, String pais, double dinero, int nivel) {
         this();
         this.setNombre(nombre);
         this.setPassword(password);
         this.setEmail(email);
         this.setPais(pais);
         this.setDinero(dinero);
+        this.setNivel(nivel);
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
     }
 
     public int getId() {

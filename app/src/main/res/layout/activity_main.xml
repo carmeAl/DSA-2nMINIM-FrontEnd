@@ -19,17 +19,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
 
     <Button
-        android:id="@+id/nivelesBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
-        android:text="NIVELES"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tiendaBtn" />
-
-    <Button
         android:id="@+id/tiendaBtn"
         android:layout_width="150dp"
         android:layout_height="72dp"
@@ -45,11 +34,12 @@
         android:id="@+id/textViewNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:typeface="serif"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -68,11 +58,12 @@
         android:layout_width="150dp"
         android:layout_height="72dp"
         android:layout_marginTop="10dp"
+        android:onClick="ayudaBtn"
         android:text="AYUDA"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nivelesBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/tiendaBtn" />
 
     <ProgressBar
         android:id="@+id/progressBar5"
@@ -83,4 +74,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonProva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="aljfzl"
+        android:onClick="funcioProva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

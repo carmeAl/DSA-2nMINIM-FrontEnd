@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String KEY_PASSWORD = "password";
     private static final String KEY_DINERO = "dinero";
     private static final String KEY_ID = "id";
+    private static final String KEY_NIVEL = "nivel";
+
 
 
     @Override
@@ -83,10 +85,17 @@ public class MainActivity extends AppCompatActivity {
         Intent login= new Intent (MainActivity.this, LogInActivity.class);
         startActivity(login);
     }
+
     public void tiendaBtn(View v){
         Intent tienda= new Intent (MainActivity.this, TiendaActivity.class);
         startActivity(tienda);
     }
+
+    public void ayudaBtn(View v){
+        Intent ayuda= new Intent (MainActivity.this, AyudaActivity.class);
+        startActivity(ayuda);
+    }
+
 
     private void doApiCall() {
         progressBar5.setVisibility(View.VISIBLE);
@@ -102,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString(KEY_PAIS,toString().valueOf(jugador.getPais()));
                 editor.putString(KEY_DINERO,toString().valueOf(jugador.getDinero()));
                 editor.putString(KEY_EMAIL,toString().valueOf(jugador.getEmail()));
+                editor.putString(KEY_NIVEL,toString().valueOf(jugador.getNivel()));
+
                 editor.apply();
                 Log.d("RESPONSE","respuesta: "+jugador.getNombre());
 

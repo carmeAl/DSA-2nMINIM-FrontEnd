@@ -95,18 +95,6 @@
 
         />
 
-    <Button
-        android:id="@+id/volverBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="#F4511E"
-        android:onClick="volverBtn"
-        android:text="VOLVER"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guardarBtn" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="275dp"
