@@ -95,7 +95,10 @@ public class MainActivity extends AppCompatActivity {
         Intent ayuda= new Intent (MainActivity.this, AyudaActivity.class);
         startActivity(ayuda);
     }
-
+    public void faqBtn(View v){
+        Intent faq= new Intent (MainActivity.this, FAQActivity.class);
+        startActivity(faq);
+    }
 
     private void doApiCall() {
         progressBar5.setVisibility(View.VISIBLE);
