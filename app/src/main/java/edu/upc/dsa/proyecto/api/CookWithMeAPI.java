@@ -2,6 +2,7 @@ package edu.upc.dsa.proyecto.api;
 
 import java.util.List;
 
+import edu.upc.dsa.proyecto.models.Denuncia;
 import edu.upc.dsa.proyecto.models.Ingrediente;
 import edu.upc.dsa.proyecto.models.IngredientesComprados;
 import edu.upc.dsa.proyecto.models.Jugador;
@@ -22,6 +23,9 @@ public interface CookWithMeAPI { //MyService
 
     @POST("/dsaApp/jugador/Register")
     Call<Void> register(@Body Register register);
+
+    @POST("/dsaApp/jugador/issue")
+    Call<Void> postDenuncia(@Body Denuncia denuncia);
 
     @GET("/dsaApp/ingrediente/getAllIngredientes")
     Call<List<Ingrediente>> getAllIngredientes();
