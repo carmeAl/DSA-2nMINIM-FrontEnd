@@ -125,6 +125,20 @@
     <string name="tienda">TIENDA</string>
     <string name="ayuda">AYUDA</string>
     <string name="ajustes">PREFERENCIAS</string>
+    <string name="compra_ingredientes_para_tus_nuevas_recetas">¡Compra ingredientes para tus nuevas recetas!</string>
+    <string name="nombre">Nombre</string>
+    <string name="inicia_sesi_n_en_el_juego">Inicia sesión en el juego:</string>
+    <string name="no_tienes_una_cuenta_creada_registrate">¿No tienes una cuenta creada? ¡Registrate!</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="introduce_tus_datos">Introduce tus datos:</string>
+    <string name="email">Email</string>
+    <string name="pa_s">País</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="ingredientes">INGREDIENTES</string>
+    <string name="utensilios">UTENSILIOS</string>
+    <string name="desbloquea_tus_ingredientes_y_utensilios">¡Desbloquea tus ingredientes y utensilios!</string>
+    <string name="mejora_tus_utensilios_para_ser_m_s_r_pido">¡Mejora tus utensilios para ser más rápido!</string>
+    <string name="comprar">COMPRAR</string>
     <string-array name="languages" >
     <item>@string/str_en</item>
     <item>@string/str_es</item>

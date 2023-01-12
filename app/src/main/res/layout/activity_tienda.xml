@@ -87,7 +87,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="#F4511E"
         android:onClick="ingredientesBtn"
-        android:text="INGREDIENTES"
+        android:text="@string/ingredientes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carousel1" />
@@ -100,7 +100,7 @@
         android:layout_marginTop="10dp"
         android:backgroundTint="#F4511E"
         android:onClick="utensiliosBtn"
-        android:text="UTENSILIOS"
+        android:text="@string/utensilios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carousel2" />
@@ -120,7 +120,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="¡Desbloquea tus ingredientes y utensilios!"
+        android:text="@string/desbloquea_tus_ingredientes_y_utensilios"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
