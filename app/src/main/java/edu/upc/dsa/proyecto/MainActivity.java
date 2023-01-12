@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar5;
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
-    private static final String SHARED_PREF_NAME = "datosLogIn";
-    private static final String KEY_NOMBRE = "nombre";
-    private static final String KEY_PAIS = "pais";
-    private static final String KEY_EMAIL = "email";
-    private static final String KEY_PASSWORD = "password";
-    private static final String KEY_DINERO = "dinero";
-    private static final String KEY_ID = "id";
-    private static final String KEY_NIVEL = "nivel";
+    static final String SHARED_PREF_NAME = "datosLogIn";
+    static final String KEY_NOMBRE = "nombre";
+    static final String KEY_PAIS = "pais";
+    static final String KEY_EMAIL = "email";
+    static final String KEY_PASSWORD = "password";
+    static final String KEY_DINERO = "dinero";
+    static final String KEY_ID = "id";
+    static final String KEY_NIVEL = "nivel";
 
 
 
@@ -94,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
     public void ayudaBtn(View v){
         Intent ayuda= new Intent (MainActivity.this, AyudaActivity.class);
         startActivity(ayuda);
+    }
+
+    public void buttonPerfil(View v){
+        Intent perfil= new Intent (MainActivity.this, PerfilActivity.class);
+        startActivity(perfil);
     }
 
 

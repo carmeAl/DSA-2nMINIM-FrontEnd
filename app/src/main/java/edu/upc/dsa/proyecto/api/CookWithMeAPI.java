@@ -44,4 +44,7 @@ public interface CookWithMeAPI { //MyService
 
     @GET("/dsaApp/utensilio/getLista/{idJugador}")
     Call<List<UtensiliosComprados>> getUtensiliosComprados(@Path("idJugador") int idJugador);
+
+    @PUT("/dsaApp/jugador/putJugador")
+    Call<Void> putJugador(@Body Jugador jugador);
 }
