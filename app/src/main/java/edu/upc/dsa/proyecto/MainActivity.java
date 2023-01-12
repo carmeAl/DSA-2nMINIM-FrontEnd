@@ -96,6 +96,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(ayuda);
     }
 
+    public void rankingBtn(View v){
+        Intent ranking= new Intent (MainActivity.this, RankingActivity.class);
+        startActivity(ranking);
+    }
+
 
     private void doApiCall() {
         progressBar5.setVisibility(View.VISIBLE);

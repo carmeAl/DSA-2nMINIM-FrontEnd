@@ -75,6 +75,7 @@ public class IngredientesActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         gitHub= Client.getClient().create(CookWithMeAPI.class);
 
+
         doApiCall(null); //hace las llamadas
         doApiCallIngredientesComprados();
 

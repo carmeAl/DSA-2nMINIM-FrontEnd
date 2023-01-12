@@ -65,6 +65,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiendaBtn" />
 
+    <Button
+        android:id="@+id/rankingBtn"
+        android:layout_width="150dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="10dp"
+        android:text="ranking"
+        android:onClick="rankingBtn"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
+
     <ProgressBar
         android:id="@+id/progressBar5"
         style="?android:attr/progressBarStyle"
@@ -75,14 +88,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonProva"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="aljfzl"
-        android:onClick="funcioProva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,9 @@ public interface CookWithMeAPI { //MyService
     @POST("/dsaApp/jugador/Login")
     Call<Void> logIn(@Body LogIn logIn);
 
+    @GET("/dsaApp/jugador/ranking")
+    Call<List<Jugador>> getRanking();
+
     @POST("/dsaApp/jugador/Register")
     Call<Void> register(@Body Register register);
 
