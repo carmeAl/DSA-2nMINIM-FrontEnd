@@ -9,24 +9,25 @@
 
     <Button
         android:id="@+id/jugarBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         android:text="@string/jugar"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
 
     <Button
         android:id="@+id/tiendaBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:onClick="tiendaBtn"
         android:text="@string/tienda"
         android:textSize="18dp"
-        android:onClick="tiendaBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jugarBtn" />
 
@@ -55,39 +56,39 @@
 
     <Button
         android:id="@+id/ayudaBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:onClick="ayudaBtn"
         android:text="@string/ayuda"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tiendaBtn" />
+
     <Button
         android:id="@+id/denunciaBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:onClick="denunciaBtn"
         android:text="DENUNCIA"
         android:textSize="18dp"
-        android:onClick="denunciaBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
 
     <Button
         android:id="@+id/rankingBtn"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
-        android:text="ranking"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:onClick="rankingBtn"
+        android:text="ranking"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAjutes" />
 
     <ProgressBar
         android:id="@+id/progressBar5"
@@ -101,26 +102,25 @@
 
     <Button
         android:id="@+id/faqBtn"
-        android:layout_width="145dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:onClick="faqBtn"
         android:text="FAQs"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ayudaBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/denunciaBtn" />
 
     <Button
         android:id="@+id/buttonAjutes"
-        android:layout_width="150dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
         android:onClick="buttonPerfil"
         android:text="@string/ajustes"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="@+id/ayudaBtn"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/ayudaBtn"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProva" />
+        app:layout_constraintTop_toBottomOf="@+id/faqBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
