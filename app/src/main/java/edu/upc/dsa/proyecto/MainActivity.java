@@ -15,6 +15,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.unity3d.player.UnityPlayerActivity;
+
 import edu.upc.dsa.proyecto.api.Client;
 import edu.upc.dsa.proyecto.api.CookWithMeAPI;
 import edu.upc.dsa.proyecto.models.Jugador;
@@ -145,5 +147,12 @@ public class MainActivity extends AppCompatActivity {
         });
         progressBar5.setVisibility(View.GONE);
     }
+
+    public void onClickJugar(View v){
+        Intent jugar= new Intent (MainActivity.this, UnityPlayerActivity.class);
+        startActivity(jugar);
+    }
+
+
 
 }

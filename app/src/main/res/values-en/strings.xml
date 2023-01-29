@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="game_view_content_description">Game view</string>
     <string name="app_name">Project</string>
     <string name="register">REGISTER</string>
     <string name="title_activity_register">Leanback Register</string>
@@ -140,4 +141,11 @@
     <string name="desbloquea_tus_ingredientes_y_utensilios">Unlock your ingredients and utensils!</string>
     <string name="mejora_tus_utensilios_para_ser_m_s_r_pido">Upgrade your utensils to be faster!</string>
     <string name="comprar">BUY</string>
+    <string name="enviar">SEND</string>
+    <string name="fecha">Date</string>
+    <string name="descripci_n">Description</string>
+    <string name="estas_son_las_preguntas_m_s_frecuentes">These are the most frequently asked questions:</string>
+    <string name="denuncia">COMPLAINT</string>
+    <string name="ranking">ranking</string>
+    <string name="atr_s">Back</string>
 </resources>

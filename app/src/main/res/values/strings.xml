@@ -1,4 +1,5 @@
 <resources>
+    <string name="game_view_content_description">Game view</string>
     <string name="app_name">Proyecto</string>
     <string name="register">REGISTER</string>
     <string name="title_activity_register">Leanback Register</string>
@@ -139,6 +140,13 @@
     <string name="desbloquea_tus_ingredientes_y_utensilios">¡Desbloquea tus ingredientes y utensilios!</string>
     <string name="mejora_tus_utensilios_para_ser_m_s_r_pido">¡Mejora tus utensilios para ser más rápido!</string>
     <string name="comprar">COMPRAR</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="fecha">Fecha</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="estas_son_las_preguntas_m_s_frecuentes">Estas son las preguntas más frecuentes:</string>
+    <string name="denuncia">DENUNCIA</string>
+    <string name="ranking">Clasificación</string>
+    <string name="atr_s">atrás</string>
     <string-array name="languages" >
     <item>@string/str_en</item>
     <item>@string/str_es</item>

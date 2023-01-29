@@ -67,7 +67,7 @@
         android:layout_width="103dp"
         android:layout_height="39dp"
         android:onClick="atrasBtn"
-        android:text="atrás"
+        android:text="@string/atr_s"
         android:textSize="14sp"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="676dp" />
