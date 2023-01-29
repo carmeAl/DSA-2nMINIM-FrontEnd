@@ -1,7 +1,10 @@
 package edu.upc.dsa.proyecto.api;
 
+import java.lang.reflect.Array;
 import java.util.List;
 
+import edu.upc.dsa.proyecto.models.FAQ;
+import edu.upc.dsa.proyecto.models.Denuncia;
 import edu.upc.dsa.proyecto.models.Ingrediente;
 import edu.upc.dsa.proyecto.models.IngredientesComprados;
 import edu.upc.dsa.proyecto.models.Jugador;
@@ -20,8 +23,14 @@ public interface CookWithMeAPI { //MyService
     @POST("/dsaApp/jugador/Login")
     Call<Void> logIn(@Body LogIn logIn);
 
+    @GET("/dsaApp/jugador/ranking")
+    Call<List<Jugador>> getRanking();
+
     @POST("/dsaApp/jugador/Register")
     Call<Void> register(@Body Register register);
+
+    @POST("/dsaApp/jugador/issue")
+    Call<Void> postDenuncia(@Body Denuncia denuncia);
 
     @GET("/dsaApp/ingrediente/getAllIngredientes")
     Call<List<Ingrediente>> getAllIngredientes();
@@ -44,4 +53,10 @@ public interface CookWithMeAPI { //MyService
 
     @GET("/dsaApp/utensilio/getLista/{idJugador}")
     Call<List<UtensiliosComprados>> getUtensiliosComprados(@Path("idJugador") int idJugador);
+
+    @GET("/dsaApp/faq/getAllFAQ")
+    Call<List<FAQ>> getAllFAQ();
+
+    @PUT("/dsaApp/jugador/putJugador")
+    Call<Void> putJugador(@Body Jugador jugador);
 }

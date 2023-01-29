@@ -3,13 +3,13 @@ package edu.upc.dsa.proyecto.models;
 
 public class Jugador {
 
-    private int id;
-    private String nombre;
-    private String password;
-    private String email;
-    private String pais;
-    private double dinero;
-    private int nivel;
+    int id;
+    public String nombre;
+    public String password;
+    public String email;
+    public String pais;
+    public double dinero;
+    public int nivel;
 
     public Jugador() {
     }
