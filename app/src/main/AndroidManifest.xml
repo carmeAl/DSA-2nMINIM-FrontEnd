@@ -47,6 +47,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".FAQActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TiendaActivity"
             android:exported="false">
             <meta-data

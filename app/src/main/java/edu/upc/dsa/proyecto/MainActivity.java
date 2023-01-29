@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
         Intent ayuda= new Intent (MainActivity.this, AyudaActivity.class);
         startActivity(ayuda);
     }
+    public void faqBtn(View v){
+        Intent faq= new Intent (MainActivity.this, FAQActivity.class);
+        startActivity(faq);
+    }
 
     public void buttonPerfil(View v){
         Intent perfil= new Intent (MainActivity.this, PerfilActivity.class);
