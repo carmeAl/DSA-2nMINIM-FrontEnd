@@ -33,6 +33,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".MyAdapterJugador"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RankingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".TiendaActivity"
             android:exported="false">
             <meta-data
